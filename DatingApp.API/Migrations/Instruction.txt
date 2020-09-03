@@ -1,0 +1,20 @@
+Created this folder and files by running the following line in the terminal:
+dotnet ef migrations add InitialCreate
+
+>The file "DataContextModelSnapshot.cs" keeps track of all the migrations,
+so that it does not have to ask the database each time to find this information.
+
+>The file "20200903071328_InitialCreate.Designer.cs" keeps track of what to remove
+from "DataContextModelSnapshot.cs". Another file for keeping track of migrations.
+
+>The file "20200903071328_InitialCreate.cs" has two functions, "up" and "down".
+The up function can create tables based on our Values class in the model.
+The down function drops the table from our database.
+
+To update a database or create one if none has been created already, run:
+dotnet ef database update.
+
+After database has been updated, you can us the "Db Broswer for Sqlite" to add new records
+into the table under the "Browse Data" tab. You can edit each field using the Text Editor
+on the right and apply your changes. Finally to write all your changes into the actual
+database, click on "Write Changes".
