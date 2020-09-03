@@ -1,0 +1,12 @@
+===========================================
+SETUP
+===========================================
+Commands are run on Powershell
+
+Created by running:
+ng new DatingApp-SPA
+
+After installing angular by running:
+npm install -g @angular/cli@6.0.8
+
+===========================================
