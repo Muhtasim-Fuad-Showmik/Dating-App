@@ -31,6 +31,9 @@ namespace DatingApp.API
             // We use Configuration for the key value pair usage and get our Connection String into Sqlite from appsettings.json
             services.AddDbContext<DataContext> ( x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            // Activating Cross-Origin Resource Sharing because we have two projects
+            // with the Angular project acccessing our Dotnet project.
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +49,7 @@ namespace DatingApp.API
             }
 
             // app.UseHttpsRedirection();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
     }

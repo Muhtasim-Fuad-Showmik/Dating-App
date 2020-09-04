@@ -10,3 +10,8 @@ After installing angular by running:
 npm install -g @angular/cli@6.0.8
 
 ===========================================
+RUN
+===========================================
+Before running the file using "ng serve"
+from this folder, i had to run:
+npm install rxjs@6.0.0 --save
